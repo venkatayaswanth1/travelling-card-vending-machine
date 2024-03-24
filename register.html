@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="/static/style.css" type="text/css" >
+    <script>
+        function validatePassword() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirm-password").value;
+
+            // Password pattern that requires at least one uppercase, one lowercase, one special character, and one digit
+            var passwordPattern = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+            if (password !== confirmPassword) {
+                alert("Password and Confirm Password do not match");
+                return false;
+            } else if (!password.match(passwordPattern)) {
+                alert("Password must contain at least one uppercase, one lowercase, one special character, and one digit");
+                return false;
+            }
+            return true;
+        }
+        function displayConfirmationMessage() {
+            var confirmationMessage = document.getElementById("confirmation-message");
+            confirmationMessage.style.display = "block";
+            return true; // Allow form submission to proceed
+        }
+    </script>
+</head>
+<body>
+    <div class="main">
+        <h1>Registration Form</h1>
+        {% for message in messages %}
+        <h5>{{message}}</h5>
+        {% endfor %}
+        <form action="{% url 'register' %}" method="post" enctype="multipart/form-data" onsubmit="return validatePassword() && displayConfirmationMessage()">
+         {% csrf_token %}
+            <div class="input-box">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-box">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+           
+            <div class="input-box">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="input-box">
+                <label for="confirmpassword">Confirm Password</label>
+                <input type="password" id="confirmpassword" name="confirmpassword" required>
+            </div>
+           
+                <div class="input-box">
+                    <label for="mobile">Mobile Number</label>
+                    <input type="tel" id="mobile" name="mobile" required>
+                </div>
+                <div class="input-box">
+                    <label for="proof">Valid Proof (Aadhar/Voter ID)</label>
+                    <input type="file" id="proof" name="proof" accept="image/*" required>
+                </div>
+            <button type="submit" class="button">Register</button>
+        </form>
+    </div>
+</body>
+</html>
