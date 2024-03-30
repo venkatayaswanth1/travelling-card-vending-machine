@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>User Details</title>
+    <link rel="stylesheet" href="static/style.css" type="text/css" >
+    <style>
+
+.userpage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   
+    background-image: url('userimage.avif');
+    background-size: cover;
+    background-position: center;
+}
+
+.userdetails,.links {
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 2); /* Drop shadow effect */
+    margin-bottom:20px;
+    backdrop-filter: blur(5px);
+    
+}
+
+
+.links ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.links ul li {
+    margin-bottom: 10px;
+}
+
+.links ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.links ul li a:hover {
+    color: #555;
+}
+
+    </style>
+</head>
+<body class="userdet">
+    <div class="userpage">
+    <div class="userdetails">
+    <h1>Welcome, {{ user.username }}</h1>
+    <p><strong>Email:</strong> {{ user.email }}</p>
+    <p><strong>Mobile:</strong> {{ user.mobile }}</p>
+    <p> <strong>Travelling Card Number:</strong>  TCN798  </p>
+    <p> <strong> Card Balance:</strong>  100Rs.</p>
+    </div>
+<div class="links">
+    <ul>
+        <li><a href="#">Add Money to the Card</a> </li>
+        <li><a href="#">View Transaction History</a></li>
+        <li><a href="#">Edit Profile</a></li>
+        <li><a href="#">Delete Account</a></li>
+
+    </ul></div>
+    </div>
+</body>
+</html>
