@@ -1,0 +1,113 @@
+.main1{
+    width: 420px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+
+}
+.main1 h1{
+    font-size: 36px;
+    text-align: center;
+
+}
+body {
+    
+        background: url('images/details.jpg')no-repeat;
+        background-size: cover;
+        background-position: center;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+   
+}
+.userdet {
+    background: url('images/details.jpg')no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.userpage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.userdetails {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Drop shadow effect */
+}
+
+.links {
+    margin-top: 20px;
+}
+
+.links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.links ul li {
+    margin-bottom: 10px;
+}
+
+.links ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.links ul li a:hover {
+    color: #555;
+}
+.userpage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;;
+    height: 100vh;
+   
+    background-image: url('images/details.jpg')no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.userdetails,.links {
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 2); /* Drop shadow effect */
+    margin-bottom:20px;
+    backdrop-filter: blur(5px);
+    
+}
+
+
+.links ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.links ul li {
+    margin-bottom: 10px;
+}
+
+.links ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.links ul li a:hover {
+    color: #555;
+}
